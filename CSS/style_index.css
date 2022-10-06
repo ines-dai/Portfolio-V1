@@ -1,0 +1,73 @@
+body {
+  width: 100vh;
+  height: 100%;
+  background-image: url(../IMAGES/boy_3D_0.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+  font-family: "Cormorant", serif;
+  color: white;
+  padding: 10% 20%;
+}
+
+/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+.header {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.header-title_name {
+  display: flex;
+  align-items: flex-end;
+}
+.header-title_name h1 {
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 7rem;
+  font-weight: bolder;
+  color: rgba(164, 222, 172, 0.386);
+}
+
+.header-title_name h2 {
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: rgba(75, 71, 136, 0.444);
+  padding-bottom: 12px;
+}
+
+.header-subtitle_portfolio {
+  font-size: 2rem;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header-message {
+  margin: 80px 50% 100px 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+p,
+li {
+  font-size: 1.5rem;
+}
+
+span {
+  font-weight: bold;
+}
+
+/* PIED DE PAGE PIED DE PAGE PIED DE PAGE PIED DE PAGE PIED DE PAGE  */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* footer {
+    
+} */
