@@ -68,6 +68,8 @@ a {
   color: white;
 }
 
-/* footer {
-    
-} */
+.footer_links {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
