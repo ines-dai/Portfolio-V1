@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Hind", sans-serif;
+  color: rgb(241, 255, 240);
+  height: 100%;
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  border: 1px solid green;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+.header-title {
+  font-size: 5em;
+  letter-spacing: 0.2em;
+  font-weight: 900;
+  text-shadow: -7.5px 0px 1px #1e7a01;
+}
+.header-letter {
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+.header-letter-w {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+.header-letter-e {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.header-letter-l {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+.header-letter-c {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.header-subtitle {
+  font-size: 2em;
+  letter-spacing: 0.5em;
+  text-align: center;
+  text-shadow: 1px 0px 1px #1e7a01, -1px 0px 1px #1e7a01, 0px 1px 1px #1e7a01, 0px -1px 1px #1e7a01;
+}
+.header-version {
+  color: #1e7a01;
+  font-weight: 900;
+  text-shadow: 2px 0px 1px #000000, -2px 0px 1px #000000, 0px 2px 1px #000000, 0px -2px 1px #000000;
+}
+.header-picture {
+  height: 110px;
+  margin: auto;
+}
+.header-nav {
+  font-size: 1.7em;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.header-nav:hover {
+  font-size: 1.8em;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+a {
+  all: unset;
+  margin-right: 1.5em;
+}
+
+a:hover {
+  text-shadow: 0px 0px 10px #1e7a01;
+  transform: scale(1.1);
+  transition: 0.8s;
+}
+
+.background {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  -webkit-animation: bg-animation 0.2s infinite;
+          animation: bg-animation 0.2s infinite;
+  opacity: 1;
+  visibility: visible;
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Hind', sans-serif; */
+@-webkit-keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}/*# sourceMappingURL=style_home.css.map */
