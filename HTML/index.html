@@ -6,32 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../CSS/reset.css">
   <link rel="stylesheet" href="../CSS/style_home.css">
-  <title>NORI DOKI</title>
+  <title>Inès D. Portfolio V1</title>
 </head>
 <body>
   <header>
     <div class="header">
       <h1 class="header-title">
-        <span class="header-letter-w">W</span><span class="header-letter-e">E</span><span class="header-letter-l">L</span><span class="header-letter-c">C</span><span class="header-letter-o">O</span><span class="header-letter-m">M</span><span class="header-letter-e">E</span> 
+        WELCOME
       </h1>
       <h2 class="header-subtitle">
         PORTFOLIO <span class="header-version">V1</span>
       </h2 class=>
     </div>
 
-    <div class="header-picture">
-      <img class="header-picture" src="../IMAGES/noridoki.gif" alt="pixel art tuxedo cat gif">
-    </div>
-
     <div class="header-nav">
       <nav>
-        <a href="">
+        <a href="#aboutme">
           about me
         </a>
-        <a href="">
+        <a href="#skills">
           skills
         </a>
-        <a href="">
+        <a href="#work">
           work
         </a>
         <a href="">
@@ -43,14 +39,101 @@
   </header>
 
   <main>
-    <section class="section-aboutme">
-      <h1>about me</h1>
-      <h2></h2>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eaque modi illum, repellat fuga similique aliquam quaerat quo perferendis neque quasi incidunt in molestias corrupti officiis veritatis perspiciatis laborum? Error? </p>
-      <p> Id fuga sint cum est sapiente necessitatibus quam, ipsam laudantium at, et, dolores temporibus nisi autem. Perferendis, mollitia eos, cum eius voluptatibus praesentium quod adipisci, nulla sapiente exercitationem reiciendis temporibus! </p>
+    <section class="section-intro">
+      <div class="intro-gif">
+        <img class="gif" src="../IMAGES/noridoki.gif" alt="pixel art tuxedo cat gif">
+      </div>
+      <div class="speechbox">
+        <div class="speechbox-main">hello... </div>
+        <div class="speechbox-direction1"></div>
+        <div class="speechbox-direction2"></div>
+      </div>
+      
     </section>
-    <section class="section-skills"></section>
-    <section class="section-work"></section>
+
+    <section id ="aboutme" class="section-aboutme">
+      <div class="section-aboutme-header">
+        <img class="gif" src="../IMAGES/noridoki_aboutme.gif" alt="pixel art tuxedo cat gif">
+        <h1 class="section-aboutme-title">About me...</h1>
+      </div>
+      
+      <div class="section-aboutme-description">
+        <p>   Id fuga sint cum est sapiente necessitatibus quam, ipsam laudantium at, et, dolores temporibus nisi autem. Perferendis, mollitia eos, cum eius voluptatibus praesentium quod adipisci, nulla sapiente exercitationem reiciendis temporibus! </p>
+        <p>   Id fuga sint cum est sapiente necessitatibus quam, ipsam laudantium at, et, dolores temporibus nisi autem. Perferendis, mollitia eos, cum eius voluptatibus praesentium quod adipisci, nulla sapiente exercitationem reiciendis temporibus! </p>
+      </div>
+      
+    </section>
+
+    <section id="skills" class="section-skills">
+      <!-- section title -->
+      <div class="section-aboutme-header">
+        <img class="gif" src="../IMAGES/noridoki_skills.gif" alt="pixel art tuxedo cat with stars gif">
+        <h1 class="section-aboutme-title">Skills</h1>
+      </div>
+
+      <div class="section-skills-div">
+      <!-- section MISC -->
+        <div class="section-skills-lists">
+          <div class="section-skills-lists-title">
+            <img src="../IMAGES/arrow-icon.svg" alt="arrow pointing right"
+            class="section-skills-arrow">
+            <h1 class="section-skills-title">Development</h1>
+          </div>
+
+          <div class="skills-list-list">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript Vanilla</li>
+              <li>ReactJS</li>
+              <li>NodeJS (Express)</li>
+              <li>SQL</li>
+              <li>Github</li>
+              <li>English</li>
+            </ul>
+          </div>
+        </div>
+      
+      <!-- section softskills -->
+        <div class="section-skills-lists">
+          <div class="section-skills-lists-title">
+            <img src="../IMAGES/arrow-icon.svg" alt="arrow pointing right"
+            class="section-skills-arrow">
+            <h1 class="section-skills-title">MISC</h1>
+          </div>
+
+          <div class="skills-list-list">
+            <ul>
+              <li>Photoshop</li>
+              <li>English</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-skills-lists">
+          <div class="section-skills-lists-title">
+            <img src="../IMAGES/arrow-icon.svg" alt="arrow pointing right" class="section-skills-arrow">
+            <h1 class="section-skills-title">Softskills</h1>
+          </div>
+          
+          <ul>
+            <li>Patience</li>
+            <li>Adaptability</li>
+            <li>Problem-solving</li>
+            <li>Attention to detail</li>
+            <li>Teamwork</li>
+            <li>Creativity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section id="work" class="section-work">
+            <div class="section-aboutme-header">
+        <img class="gif" src="../IMAGES/noridoki_aboutme.gif" alt="pixel art tuxedo cat gif">
+        <h1 class="section-aboutme-title">Work</h1>
+      </div>  
+    </section>
 
   </main>
   <div class="background"></div>

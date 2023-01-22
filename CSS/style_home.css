@@ -1,207 +1,204 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 body {
   font-family: "Hind", sans-serif;
-  color: rgb(241, 255, 240);
+  color: rgb(0, 0, 0);
   height: 100%;
-  background-color: #111111;
+  background-color: #ffffff;
   margin: 0;
   overflow-x: hidden;
 }
 
 header {
+  width: 99%;
   display: flex;
-  border: 1px solid green;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   margin: 2rem;
+  position: fixed;
+  font-family: "Press Start 2P", "Montserrat", sans-serif;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
 }
 .header-title {
-  font-size: 5em;
+  font-size: 4em;
+  color: #ffffff;
   letter-spacing: 0.2em;
   font-weight: 900;
-  text-shadow: -7.5px 0px 1px #1e7a01;
-}
-.header-letter {
-  transform: translatey(0px);
-  -webkit-animation: float 6s ease-in-out infinite;
-          animation: float 6s ease-in-out infinite;
-}
-.header-letter-w {
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-}
-.header-letter-e {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-.header-letter-l {
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-}
-.header-letter-c {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  text-shadow: 15px 10px 1px #000000, -5px 0px 1px black, 5px 0px 1px black, 0px 5px 1px black, 0px -5px 1px black;
+  margin-bottom: 20px;
 }
 .header-subtitle {
-  font-size: 2em;
+  font-size: 1em;
   letter-spacing: 0.5em;
   text-align: center;
-  text-shadow: 1px 0px 1px #1e7a01, -1px 0px 1px #1e7a01, 0px 1px 1px #1e7a01, 0px -1px 1px #1e7a01;
 }
 .header-version {
-  color: #1e7a01;
+  color: #ffe100;
   font-weight: 900;
-  text-shadow: 2px 0px 1px #000000, -2px 0px 1px #000000, 0px 2px 1px #000000, 0px -2px 1px #000000;
-}
-.header-picture {
-  height: 110px;
-  margin: auto;
+  text-shadow: 3px 0px 1px #000000, -3px 0px 1px #000000, 0px 3px 1px #000000, 0px -3px 1px #000000;
 }
 .header-nav {
-  font-size: 1.7em;
+  font-size: 1.3em;
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.1em;
-}
-.header-nav:hover {
-  font-size: 1.8em;
-  cursor: pointer;
-  font-weight: 600;
 }
 
 a {
   all: unset;
   margin-right: 1.5em;
+  transition: 0.1s;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 a:hover {
-  text-shadow: 0px 0px 10px #1e7a01;
-  transform: scale(1.1);
-  transition: 0.8s;
+  box-shadow: 5px 5px 1px black;
+  cursor: pointer;
+  transition: 0.1s;
 }
 
-.background {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200vh;
-  background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
-  background-repeat: repeat;
-  -webkit-animation: bg-animation 0.2s infinite;
-          animation: bg-animation 0.2s infinite;
-  opacity: 1;
-  visibility: visible;
+.section-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Press Start 2P", "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  height: 100vh;
 }
 
-@-webkit-keyframes bg-animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-5%, -5%);
-  }
-  20% {
-    transform: translate(-10%, 5%);
-  }
-  30% {
-    transform: translate(5%, -10%);
-  }
-  40% {
-    transform: translate(-5%, 15%);
-  }
-  50% {
-    transform: translate(-10%, 5%);
-  }
-  60% {
-    transform: translate(15%, 0);
-  }
-  70% {
-    transform: translate(0, 10%);
-  }
-  80% {
-    transform: translate(-15%, 0);
-  }
-  90% {
-    transform: translate(10%, 5%);
-  }
-  100% {
-    transform: translate(5%, 0);
-  }
+.gif {
+  margin-right: 50px;
+  height: 130px;
 }
 
-@keyframes bg-animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-5%, -5%);
-  }
-  20% {
-    transform: translate(-10%, 5%);
-  }
-  30% {
-    transform: translate(5%, -10%);
-  }
-  40% {
-    transform: translate(-5%, 15%);
-  }
-  50% {
-    transform: translate(-10%, 5%);
-  }
-  60% {
-    transform: translate(15%, 0);
-  }
-  70% {
-    transform: translate(0, 10%);
-  }
-  80% {
-    transform: translate(-15%, 0);
-  }
-  90% {
-    transform: translate(10%, 5%);
-  }
-  100% {
-    transform: translate(5%, 0);
-  }
+.speechbox {
+  position: relative;
 }
+
+.speechbox-main {
+  margin: 20px auto;
+  height: 60px;
+  width: 600px;
+  border: 5px solid black;
+  box-shadow: 10px 10px 1px black;
+  padding: 15px;
+}
+
+.speechbox-direction1 {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid #000000;
+  border-top: 20px solid #000000;
+  border-bottom: 20px solid transparent;
+  left: -35px;
+  top: 60px;
+}
+
+.speechbox-direction2 {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid #ffffff;
+  border-top: 15px solid #ffffff;
+  border-bottom: 15px solid transparent;
+  left: -25px;
+  top: 65px;
+}
+
+.section-aboutme {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-aboutme-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.section-aboutme-title {
+  font-family: "Press Start 2P", "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  height: 30px;
+  width: auto;
+  border: 5px solid black;
+  box-shadow: 10px 10px 1px black;
+  padding: 20px 10px 0px;
+}
+.section-aboutme-description {
+  width: 60%;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-right: 30px;
+  margin-bottom: 20px;
+}
+
+.section-skills {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-skills-arrow {
+  height: 1.1em;
+}
+.section-skills-title {
+  font-family: "Press Start 2P", "Montserrat", sans-serif;
+  font-size: 1.1em;
+  margin-left: 15px;
+}
+.section-skills-div {
+  display: flex;
+}
+.section-skills-lists {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid black;
+  box-shadow: 5px 5px 1px #ffe100;
+  margin: 5%;
+  padding: 5%;
+}
+.section-skills-lists-title {
+  display: flex;
+  margin: 10px;
+}
+.section-skills-list {
+  display: flex;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.section-work {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* font-family: 'Montserrat', sans-serif; */
-/* font-family: 'Hind', sans-serif; */
-@-webkit-keyframes float {
-  0% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-  }
-  50% {
-    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-    transform: translatey(-20px);
-  }
-  100% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-  }
-}
-@keyframes float {
-  0% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-  }
-  50% {
-    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-    transform: translatey(-20px);
-  }
-  100% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-  }
-}/*# sourceMappingURL=style_home.css.map */
+/* font-family: 'Hind', sans-serif; *//*# sourceMappingURL=style_home.css.map */

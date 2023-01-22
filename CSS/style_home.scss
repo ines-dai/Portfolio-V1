@@ -1,8 +1,8 @@
 body {
     font-family: 'Hind', sans-serif;
-    color: rgb(241, 255, 240);
+    color: rgb(0, 0, 0);
     height: 100%;
-    background-color: #111111;
+    background-color: #ffffff;
     margin: 0;
     overflow-x: hidden;
 }
@@ -10,124 +10,221 @@ body {
 // HEADER HEADER HEADER HEADER HEADER HEADER HEADER 
 
 header {
+    width: 99%;
     display: flex;
-    border: 1px solid green;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
     margin: 2rem;
+    position: fixed;
+    font-family: 'Press Start 2P', 'Montserrat', sans-serif;
 }
 
 .header {
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
 
     &-title {
-        font-size: 5em;
+        font-size: 4em;
+        color: #ffffff;
         letter-spacing: 0.2em;
         font-weight: 900;
-        text-shadow: -7.5px 0px 1px #1e7a01;
-    }
-
-    &-letter {
-        transform: translatey(0px);
-        animation: float 6s ease-in-out infinite;
-        
-        &-w {
-        animation-delay: -2s;
-        }
-        &-e {
-            animation-delay: 0s;
-        }
-        &-l {
-            animation-delay: -1s;
-        }
-        &-c {
-            animation-delay: 1s;
-        }
-        
+        text-shadow: 15px 10px 1px #000000,
+        -5px 0px 1px black,
+        5px 0px 1px black,
+        0px 5px 1px black,
+        0px -5px 1px black;
+        margin-bottom: 20px;
     }
 
     &-subtitle {
-        font-size: 2em;
+        font-size: 1em;
         letter-spacing: 0.5em;
         text-align: center;
-        text-shadow: 1px 0px 1px #1e7a01,
-        -1px 0px 1px #1e7a01,
-        0px 1px 1px #1e7a01,
-        0px -1px 1px #1e7a01;
+        // text-shadow: 1px 0px 1px #1e7a01,
+        // -1px 0px 1px #1e7a01,
+        // 0px 1px 1px #1e7a01,
+        // 0px -1px 1px #1e7a01;
     }
 
     &-version {
-        color: #1e7a01;
+        color: #ffe100;
         font-weight: 900;
-        text-shadow: 2px 0px 1px #000000,
-        -2px 0px 1px #000000,
-        0px 2px 1px #000000,
-        0px -2px 1px #000000;
-    }
-
-    &-picture {
-        height: 110px;
-        margin: auto;
+        text-shadow: 3px 0px 1px #000000,
+        -3px 0px 1px #000000,
+        0px 3px 1px #000000,
+        0px -3px 1px #000000;
     }
 
     &-nav {
-        font-size: 1.7em;
+        font-size: 1.3em;
         cursor: pointer;
         font-weight: 600;
         letter-spacing: 0.1em;
-    }
-
-    &-nav:hover {
-        font-size: 1.8em;
-        cursor: pointer;
-        font-weight: 600;
-
     }
 }
 
 a {
     all: unset;
     margin-right: 1.5em;
+    transition: 0.1s;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 a:hover {
-    text-shadow: 0px 0px 10px #1e7a01;
-    transform: scale(1.1);
-    transition: 0.8s;
+    box-shadow: 5px 5px 1px black;
+    cursor: pointer;
+    transition: 0.1s;
+}
+// MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN 
+
+// INTRO
+.section-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    height: 100vh;
+}
+
+.gif {
+    margin-right: 50px;
+    height: 130px;
+}
+
+.speechbox {
+    position:relative;
+}
+
+.speechbox-main {
+    margin: 20px auto;
+    height: 60px;
+    width: 600px;
+    border: 5px solid black;
+    box-shadow: 10px 10px 1px black;
+    padding: 15px;
+}
+
+.speechbox-direction1 {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid #000000;
+    border-top: 20px solid #000000;
+    border-bottom: 20px solid transparent;
+    left: -35px;
+    top: 60px;
+}
+
+.speechbox-direction2 {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid #ffffff;
+    border-top: 15px solid #ffffff;
+    border-bottom: 15px solid transparent;
+    left: -25px;
+    top: 65px;
+}
+
+// ABOUT ME
+
+.section-aboutme {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+     
+    &-title {
+        font-family: 'Press Start 2P', 'Montserrat', sans-serif; 
+        font-size: 1.5rem;
+        height: 30px;
+        width: auto;
+        border: 5px solid black;
+        box-shadow: 10px 10px 1px black;
+        padding: 20px 10px 0px;
+    }
+
+    &-description {
+        width: 60%;
+    }
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-right: 30px;
+    margin-bottom: 20px;
+}
+
+// SKILLS
+.section-skills {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+
+    &-arrow {
+        height: 1.1em;
+    }
+
+    &-title {
+        font-family:'Press Start 2P', 'Montserrat', sans-serif; 
+        font-size: 1.1em;
+        margin-left: 15px;
+    }
+    &-div {
+            display: flex;
+        }
+    &-lists {
+        display: flex;
+        flex-direction: column;
+        border: 5px solid black;
+        box-shadow:5px 5px 1px #ffe100;
+        margin: 5%;
+        padding:5%;
+
+        &-title {
+            display: flex;
+            margin: 10px;
+        }
+    }    
+    &-list {
+        display: flex;
+    }
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+// WORK
+.section-work {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
 }
 
 // BACKGROUND BACKGROUND BACKGROUND BACKGROUND 
-
-.background {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation .2s infinite;
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  @keyframes bg-animation {
-      0% { transform: translate(0,0) }
-      10% { transform: translate(-5%,-5%) }
-      20% { transform: translate(-10%,5%) }
-      30% { transform: translate(5%,-10%) }
-      40% { transform: translate(-5%,15%) }
-      50% { transform: translate(-10%,5%) }
-      60% { transform: translate(15%,0) }
-      70% { transform: translate(0,10%) }
-      80% { transform: translate(-15%,0) }
-      90% { transform: translate(10%,5%) }
-      100% { transform: translate(5%,0) }
-  }
 
 // FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS 
 
@@ -139,19 +236,6 @@ a:hover {
 
 /* font-family: 'Hind', sans-serif; */
 
-// FLOAT FLOAT FLOAT FLOAT FLOAT FLOAT FLOAT FLOAT
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-@keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-}
+// font-family: 'Press Start 2P', cursive;
