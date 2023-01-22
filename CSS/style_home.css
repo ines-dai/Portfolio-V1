@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
 body {
   font-family: "Hind", sans-serif;
   color: rgb(0, 0, 0);
   height: 100%;
   background-color: #ffffff;
   margin: 0;
-  overflow-x: hidden;
 }
 
 header {
@@ -40,7 +45,7 @@ header {
 }
 .header-version {
   color: #ffe100;
-  font-weight: 900;
+  font-weight: 400;
   text-shadow: 3px 0px 1px #000000, -3px 0px 1px #000000, 0px 3px 1px #000000, 0px -3px 1px #000000;
 }
 .header-nav {
@@ -71,6 +76,9 @@ a:hover {
   font-family: "Press Start 2P", "Montserrat", sans-serif;
   font-size: 1.5rem;
   height: 100vh;
+  scroll-margin-top: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .gif {
@@ -121,11 +129,13 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  scroll-margin-top: 0;
+  scroll-snap-align: start;
 }
 .section-aboutme-header {
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 .section-aboutme-title {
   font-family: "Press Start 2P", "Montserrat", sans-serif;
@@ -138,6 +148,7 @@ a:hover {
 }
 .section-aboutme-description {
   width: 60%;
+  margin-top: 15px;
 }
 
 p {
@@ -153,6 +164,8 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  scroll-margin-top: 0;
+  scroll-snap-align: start;
 }
 .section-skills-arrow {
   height: 1.1em;
@@ -164,18 +177,20 @@ p {
 }
 .section-skills-div {
   display: flex;
+  justify-content: center;
 }
 .section-skills-lists {
   display: flex;
   flex-direction: column;
   border: 5px solid black;
-  box-shadow: 5px 5px 1px #ffe100;
+  box-shadow: 10px 10px 1px #ffe100;
   margin: 5%;
   padding: 5%;
 }
 .section-skills-lists-title {
   display: flex;
   margin: 10px;
+  margin-bottom: 20px;
 }
 .section-skills-list {
   display: flex;
@@ -198,6 +213,50 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Montserrat", "Hind";
+  scroll-margin-top: 0;
+  scroll-snap-align: start;
+}
+.section-work-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-work-list-img {
+  margin: 10px 20px 10px 10px;
+}
+.section-work-item {
+  display: flex;
+  border: 5px solid black;
+  box-shadow: 10px 10px 1px #ffe100;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  margin-bottom: 30px;
+  width: 600px;
+}
+.section-work-item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.section-work-item-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.section-work-item-description {
+  font-size: 1.1rem;
+  margin: 15px 0;
+}
+.section-work-item-stack {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: auto 0px;
+}
+.section-work-item-icon {
+  height: 50px;
+  margin: auto;
 }
 
 /* font-family: 'Montserrat', sans-serif; */
