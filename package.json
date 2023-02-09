@@ -17,9 +17,5 @@
     "url": "https://github.com/ines-dai/Portfolio-V1/issues"
   },
   "homepage": "https://github.com/ines-dai/Portfolio-V1#readme",
-  "dependencies": {
-    "express": "^4.18.2",
-    "nodemon": "^2.0.20"
-  },
-  "description": ""
+  "description": "Inès D. - Portfolio V1"
 }
