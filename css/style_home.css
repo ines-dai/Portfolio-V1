@@ -14,6 +14,7 @@ body {
   background-color: #ffffff;
   margin: 0;
   font-size: 12px;
+  z-index: 1;
 }
 
 header {
@@ -25,6 +26,7 @@ header {
   margin: 2rem;
   position: fixed;
   font-family: "Press Start 2P", "Montserrat", sans-serif;
+  z-index: 2;
 }
 
 .header {
@@ -38,6 +40,7 @@ header {
   font-weight: 900;
   text-shadow: 10px 8px 1px #000000, -5px 0px 1px black, 5px 0px 1px black, 0px 5px 1px black, 0px -5px 1px black;
   margin-bottom: 20px;
+  margin-right: 100px;
 }
 .header-subtitle {
   font-size: 1em;
@@ -62,16 +65,19 @@ a {
   transition: 0.1s;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  line-height: 2rem;
+  cursor: pointer;
 }
 
-a:hover {
-  box-shadow: 5px 5px 1px black;
+.nav-btn:hover {
+  box-shadow: 5px 5px 1px black ;
   cursor: pointer;
   transition: 0.1s;
 }
 
 .section-intro {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Press Start 2P", "Montserrat", sans-serif;
@@ -80,6 +86,11 @@ a:hover {
   scroll-margin-top: 0;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  position: relative;
+}
+
+.section-intro-animation {
+  display: flex;
 }
 
 .gif {
@@ -124,16 +135,29 @@ a:hover {
   top: 65px;
 }
 
-/* .speechbox-text {
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 1rem;
-} */
-
 #speechbox-text-sentence {
   color: #000000;
   line-height: 2rem;
+}
+
+.scroll-btn {
+  background-color: transparent;
+  position: absolute;
+  top: 90%;
+  animation: fadeAndScale 1.5s infinite alternate-reverse;
+}
+
+@keyframes fadeAndScale {
+  0% { opacity: 0.2;
+        scale: 1; }
+  100% { opacity: 1;
+  scale:1.1; }
+}
+
+.arrow-icon {
+  height : 50px;
+  rotate: 90deg;
+  cursor: pointer;
 }
 
 
@@ -146,6 +170,7 @@ a:hover {
   flex-direction: column;
   scroll-margin-top: 0;
   scroll-snap-align: start;
+  position: relative;
 }
 .section-aboutme-header {
   display: flex;
@@ -181,6 +206,7 @@ p {
   flex-direction: column;
   scroll-margin-top: 0;
   scroll-snap-align: start;
+  position: relative;
 }
 .section-skills-arrow {
   height: 1.1em;
@@ -234,7 +260,9 @@ li {
   font-family: "Montserrat", "Hind";
   scroll-margin-top: 0;
   scroll-snap-align: start;
+  position: relative;
 }
+
 .section-work-list {
   display: flex;
   flex-direction: column;
@@ -282,6 +310,10 @@ li {
 }
 .hidden img {
   visibility: hidden;
+}
+
+.section-work .scroll-btn {
+  rotate: 180deg;
 }
 
 /* font-family: 'Montserrat', sans-serif; */

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style_home.css">
+  <script src="https://unpkg.com/typewriter-effect@2.19.0/dist/core.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <title>Inès D. Portfolio V1</title>
 </head>
 <body>
@@ -21,16 +23,16 @@
 
     <div class="header-nav">
       <nav>
-        <a href="#aboutme">
+        <a class="nav-btn" href="#aboutme">
           about me
         </a>
-        <a href="#skills">
+        <a class="nav-btn" href="#skills">
           skills
         </a>
-        <a href="#work">
+        <a class="nav-btn" href="#work">
           work
         </a>
-        <a href="">
+        <a class="nav-btn" href="">
           contact
         </a>
       </nav>
@@ -39,23 +41,27 @@
   </header>
 
   <main>
-    <section class="section-intro">
-      <div class="intro-gif">
-        <img class="gif" src="./img/noridoki.gif" alt="pixel art tuxedo cat gif">
-      </div>
-      <div class="speechbox">
-        <div class="speechbox-main">
-          <div class="speechbox-text"
-          id="speechbox-text">
-            <p id="speechbox-text-sentence"></p> 
-            <!-- <p class="speechbox-text-2">Welcome to my humble portfolio</p> 
-            <p class="speechbox-text-3">Keep scrolling to learn more about me.</p>  -->
-          </div>
+    <section class="section-intro"
+    id="home">
+      <div class="section-intro-animation">
+        <div class="intro-gif">
+          <img class="gif" src="./img/noridoki.gif" alt="pixel art tuxedo cat gif">
         </div>
-        <div class="speechbox-direction1"></div>
-        <div class="speechbox-direction2"></div>
+        <div class="speechbox">
+          <div class="speechbox-main">
+              <p id="speechbox-text-sentence"></p> 
+          </div>
+          <div class="speechbox-direction1"></div>
+          <div class="speechbox-direction2"></div>
+        </div>
       </div>
-      
+      <a 
+        class="scroll-btn"
+        href="#aboutme">
+        <img 
+          class="arrow-icon"
+          src="./img/arrow-icon.svg" alt="arrow pointing south">
+      </a>
     </section>
 
     <section id ="aboutme" class="section-aboutme">
@@ -65,9 +71,19 @@
       </div>
       
       <div class="section-aboutme-description">
-        <p>   Id fuga sint cum est sapiente necessitatibus quam, ipsam laudantium at, et, dolores temporibus nisi autem. Perferendis, mollitia eos, cum eius voluptatibus praesentium quod adipisci, nulla sapiente exercitationem reiciendis temporibus! </p>
+        <p>   My name is Ines, I'm 26 and I live in Paris.
+        </p>
+        <p>I started coding a few months ago, liked it and decived I wanted to make a living out of it. I'm currently learning web developpement through a 6-month program with O'Clock where we focus the essentials : HTML/CSS, Javascript,   </p>
         <p>   Id fuga sint cum est sapiente necessitatibus quam, ipsam laudantium at, et, dolores temporibus nisi autem. Perferendis, mollitia eos, cum eius voluptatibus praesentium quod adipisci, nulla sapiente exercitationem reiciendis temporibus! </p>
       </div>
+
+      <a 
+      class="scroll-btn"
+      href="#skills">
+      <img 
+        class="arrow-icon"
+        src="./img/arrow-icon.svg" alt="arrow pointing south">
+      </a>
       
     </section>
 
@@ -134,6 +150,13 @@
           </ul>
         </div>
       </div>
+      <a 
+      class="scroll-btn"
+      href="#work">
+        <img 
+          class="arrow-icon"
+          src="./img/arrow-icon.svg" alt="arrow pointing south">
+      </a>
     </section>
     
     <section id="work" class="section-work">
@@ -144,33 +167,33 @@
 
         <div class="section-work-list">
           <!-- portfolio project -->
-          <div class="section-work-item">
-            <img class="section-work-list-img" 
-            src="./img/portfolio-icon.png" alt="Portfolio icon">
+          <a class ="project" href="https://github.com/ines-dai/Portfolio-V1">
+            <div class="section-work-item">
+              <img class="section-work-list-img" 
+              src="./img/portfolio-icon.png" alt="Portfolio icon">
             <div class="section-work-item-text">
               <h1 class="section-work-item-title">Portfolio</h1>
               <p class="section-work-item-description">Simple website to practice web development</p>
               <p class="section-work-item-stack">HTML, CSS, Vanilla JS</p>
             </div>
-            <a class ="icon" href="https://github.com/ines-dai/Portfolio-V1">
               <img src="./img/github-icon.png" 
               class="section-work-item-icon" alt="Github Icon">
-            </a>
-          </div>
+            </div>
+          </a>
           <!-- 2nd project -->
-          <div class="section-work-item hidden">
-            <img class="section-work-list-img " 
-            src="./img/portfolio-icon.png" alt="Portfolio icon">
+          <a class ="project" href="">
+            <div class="section-work-item hidden">
+              <img class="section-work-list-img " 
+              src="./img/portfolio-icon.png" alt="Portfolio icon">
             <div class="section-work-item-text">
               <h1 class="section-work-item-title">Projet d'Apothéose</h1>
               <p class="section-work-item-description">Projet en groupe du 13/02 au 10/03</p>
               <p class="section-work-item-stack">...</p>
             </div>
-            <a class ="icon" href="">
               <img src="./img/github-icon.png" 
               class="section-work-item-icon" alt="Github Icon">
-            </a>
-          </div>
+            </div>
+          </a>
           <!-- upcoming project -->
           <!-- <div class="section-work-item">
             <img class="section-work-list-img" 
@@ -186,10 +209,17 @@
             </a>
           </div> -->
         </div>
+        <a 
+        class="scroll-btn last"
+        href="#home">
+        <img 
+          class="arrow-icon"
+          src="./img/arrow-icon.svg" alt="arrow pointing north">
+        </a>
     </section>
 
   </main>
-  <script src="https://unpkg.com/typewriter-effect@2.19.0/dist/core.js"></script>
+  
   <script type="module" src="./js/script.js"></script>
 </body>
 </html>
