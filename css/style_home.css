@@ -7,6 +7,11 @@
       scroll-snap-type: y mandatory;
 }
 
+a {
+  all: unset;
+  cursor: pointer;
+}
+
 body {
   font-family: "Hind", sans-serif;
   color: rgb(0, 0, 0);
@@ -32,6 +37,7 @@ header {
 .header {
   display: flex;
   flex-direction: column;
+  margin-right: 100px;
 }
 .header-title {
   font-size: 4em;
@@ -40,7 +46,6 @@ header {
   font-weight: 900;
   text-shadow: 10px 8px 1px #000000, -5px 0px 1px black, 5px 0px 1px black, 0px 5px 1px black, 0px -5px 1px black;
   margin-bottom: 20px;
-  margin-right: 100px;
 }
 .header-subtitle {
   font-size: 1em;
@@ -59,7 +64,7 @@ header {
   letter-spacing: 0.1em;
 }
 
-a {
+.nav-btn {
   all: unset;
   margin-right: 1.5em;
   transition: 0.1s;
@@ -127,7 +132,7 @@ a {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 15px solid transparent;
+  border-left:15px solid transparent;
   border-right: 15px solid #ffffff;
   border-top: 15px solid #ffffff;
   border-bottom: 15px solid transparent;
@@ -145,6 +150,10 @@ a {
   position: absolute;
   top: 90%;
   animation: fadeAndScale 1.5s infinite alternate-reverse;
+}
+
+.last {
+  rotate: 180deg;
 }
 
 @keyframes fadeAndScale {
@@ -187,9 +196,10 @@ a {
   padding: 20px 10px 0px;
 }
 .section-aboutme-description {
-  width: 60%;
+  width: 70%;
   margin-top: 15px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
 }
 
 p {
@@ -267,38 +277,44 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .section-work-list-img {
-  margin: 10px 20px 10px 10px;
+  margin: 10px 20px 15px 10px;
+  height: 60%;
 }
 .section-work-item {
   display: flex;
   border: 5px solid black;
   box-shadow: 10px 10px 1px #ffe100;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 1%;
-  margin-bottom: 30px;
+  margin-bottom: 5%;
   width: 600px;
+  height: 110px;
 }
 .section-work-item-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
+  height: 90px;
 }
 .section-work-item-title {
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 10px 0 5px;
 }
 .section-work-item-description {
   font-size: 1.1rem;
-  margin: 15px 0;
+  margin-bottom: 5px;
+  line-height: 1rem;
 }
 .section-work-item-stack {
   font-size: 1.1rem;
   font-style: italic;
-  margin: auto 0px;
+  /* margin: auto 0px; */
 }
 .section-work-item-icon {
   height: 50px;
@@ -306,15 +322,257 @@ li {
 }
 
 .hidden {
-  box-shadow: 10px 10px 1px #000000;
-}
-.hidden img {
   visibility: hidden;
 }
 
-.section-work .scroll-btn {
-  rotate: 180deg;
+.section-contact {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  /* font-family: "Press Start 2P", "Montserrat", sans-serif; */
+  /* font-size: 1.5rem; */
+  scroll-margin-top: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
 }
 
-/* font-family: 'Montserrat', sans-serif; */
-/* font-family: 'Hind', sans-serif; *//*# sourceMappingURL=style_home.css.map */
+.section-contact-list {
+  display: flex;
+  width: 50%;
+  margin-top: 5%;
+  margin-bottom: 15%;
+  justify-content: space-around;
+}
+
+.section-contact-item {
+    transition: 0.5s;
+}
+
+.section-contact-item:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+.section-contact-img {
+  height: 100px;
+}
+
+
+@media (max-width: 880px) {
+  /* * {
+    scroll-behavior: smooth;
+    -ms-scroll-snap-type: initial;
+        scroll-snap-type: initial;
+  } */
+
+  body {
+    font-size: 10px;
+  }
+
+  header {
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+  }
+
+  .header {
+    align-items: center;
+    margin: auto;
+    margin-right: 10%;
+    margin-bottom: 0.5rem;
+  }
+  .header-title {
+    font-size: 3em;
+    text-shadow: 8px 6px 1px #000000, 
+    -5px 0px 1px black, 
+    5px 0px 1px black, 
+    0px 5px 1px black, 
+    0px -5px 1px black;
+    letter-spacing: 0.4em;
+  }
+
+  .header-nav {
+    /* font-size: 1em; */
+  }
+
+  .scroll-btn {
+    display: none;
+  }
+
+  .section-intro .section-aboutme .section-skills .section-work {
+    scroll-margin-top: 100;
+    scroll-snap-align: center;
+    scroll-snap-stop: initial;
+  }
+
+  .section-intro-animation {
+    flex-direction: column;
+  }
+
+  .speechbox-main {
+    width: 300px;
+    height: 150px;
+  }
+
+  .speechbox-direction1 {
+    border-left: 20px solid #000000;
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid #000000;
+    left: 130px;
+    top: -17px;
+  }
+
+  .speechbox-direction2 {
+    border-left:17px solid #ffffff;
+    border-right: 17px solid transparent;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid #ffffff;
+    left: 137px;
+    top: -3px;
+  }
+  .section-aboutme-header {  
+    scale: 0.8;
+    margin-top: 50px;
+  }
+
+  .section-aboutme-title {
+    height: auto;
+    width: auto;
+  }
+
+  .section-aboutme-description {
+    width: 90%;
+    line-height: 1.2rem;
+    /* font-size: 1rem; */
+  }
+
+  .section-work-item {
+    scale: 0.9;
+  }
+}
+
+/* PHONE PHONE PHONE PHONE PHONE  */
+/* @media only screen and (max-width: 600px) */
+@media (max-width: 600px) {
+  * {
+    scroll-behavior: smooth;
+    -ms-scroll-snap-type: initial;
+        scroll-snap-type: initial;
+  }
+
+  body {
+    width: 100%;
+    font-size: 7px;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 3% 1%;
+  }
+
+  .header {
+    align-items: center;
+    margin: auto;
+  }
+
+  .header-title {
+    text-shadow: 5px 5px 1px #000000, 
+    -4px 0px 1px black, 
+    4px 0px 1px black, 
+    0px 4px 1px black, 
+    0px -4px 1px black;
+    letter-spacing: 0.8rem;
+  }
+
+  .header-nav {
+    flex-wrap: wrap;
+  }
+
+  .header-nav a {
+    display: inline-block;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+    justify-content: flex-start;
+    padding-top: 30%;
+  }
+
+  .section-intro-animation {
+    height: 45vh;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .speechbox-main {
+    height: 150px;
+    width: 200px;
+  }
+
+  .section-aboutme-header {
+    scale: 0.6;
+  }
+
+  .section-aboutme-description {
+    font-size: 0.9rem;
+    /* line-height: 1.5rem; */
+  }
+
+  .section-skills-div {
+    flex-direction: column;
+    font-size: 0.6rem;
+    align-items: center;
+  }
+
+  .section-skills-lists {
+    width: 90%;
+  }
+
+  .skills-list-list li {
+    font-size: 0.8rem;
+    margin-bottom: 1%;
+  }
+
+  .section-work-item {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 280px;
+  }
+
+  .section-work-item-text {
+    text-align: center;
+  }
+
+  .section-work-item-title, .section-work-item-stack {
+      font-size: 0.8rem;
+  }
+
+  .section-work-list a {
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-contact {
+    justify-content: center;
+    padding-bottom: 25%;
+  }
+
+  .section-contact-list {
+    flex-direction: column;
+  }
+
+  .section-contact-item {
+    display: inline-block;
+    text-align: center;
+ }
+
+ .section-contact-img {
+    height: 60px;
+}
+
+}

@@ -13,17 +13,17 @@ const app = {
         
         const typewriter = new Typewriter(aboutMeDiv, {
             loop: true,
-            delay: 60,
+            delay: 50,
         });
 
         typewriter.typeString(hello)
-            .pauseFor(2000)
+            .pauseFor(1500)
             .deleteAll()
             .typeString(welcome)
-            .pauseFor(2000)
+            .pauseFor(1500)
             .deleteAll()
             .typeString(scroll)
-            .pauseFor(2000)
+            .pauseFor(1500)
             .start();
     },
 

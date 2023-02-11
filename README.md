@@ -1,15 +1,3 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Welcome to my portfolio
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+this is a simple project with the basics : html - css - javascript vanilla.
