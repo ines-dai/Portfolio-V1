@@ -177,7 +177,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  scroll-margin-top: 0;
+  scroll-margin-top: -4rem;
   scroll-snap-align: start;
   position: relative;
 }
@@ -214,7 +214,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  scroll-margin-top: 0;
+  scroll-margin-top: -2rem;
   scroll-snap-align: start;
   position: relative;
 }
@@ -268,7 +268,7 @@ li {
   align-items: center;
   flex-direction: column;
   font-family: "Montserrat", "Hind";
-  scroll-margin-top: 0;
+  scroll-margin-top: -1rem;
   scroll-snap-align: start;
   position: relative;
 }
@@ -333,7 +333,7 @@ li {
   flex-direction: column;
   /* font-family: "Press Start 2P", "Montserrat", sans-serif; */
   /* font-size: 1.5rem; */
-  scroll-margin-top: 0;
+  scroll-margin-top: -2rem;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   position: relative;
@@ -391,10 +391,6 @@ li {
     0px 5px 1px black, 
     0px -5px 1px black;
     letter-spacing: 0.4em;
-  }
-
-  .header-nav {
-    /* font-size: 1em; */
   }
 
   .scroll-btn {
@@ -457,11 +453,11 @@ li {
 /* PHONE PHONE PHONE PHONE PHONE  */
 /* @media only screen and (max-width: 600px) */
 @media (max-width: 600px) {
-  * {
+  /* * {
     scroll-behavior: smooth;
-    -ms-scroll-snap-type: initial;
-        scroll-snap-type: initial;
-  }
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+  } */
 
   body {
     width: 100%;
@@ -522,14 +518,22 @@ li {
     /* line-height: 1.5rem; */
   }
 
+  .section-skills {
+    justify-content: flex-start;
+    padding-top: 15%;
+  }
+
   .section-skills-div {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size: 0.6rem;
     align-items: center;
   }
 
   .section-skills-lists {
-    width: 90%;
+    width: 25%;
+    height: 150px;
+    margin-top: 0;
   }
 
   .skills-list-list li {
@@ -537,11 +541,20 @@ li {
     margin-bottom: 1%;
   }
 
+  .section-work {
+    padding-top: 10%;
+    justify-content: flex-start;
+  }
+
   .section-work-item {
     flex-direction: column;
     align-items: center;
     height: auto;
-    width: 280px;
+    width: 200px;
+  }
+
+  .section-work-list-img {
+    width: 60%;
   }
 
   .section-work-item-text {
@@ -558,8 +571,9 @@ li {
   }
 
   .section-contact {
-    justify-content: center;
-    padding-bottom: 25%;
+    justify-content: flex-start;
+    padding-top: 15%;
+    padding-bottom: 20%;
   }
 
   .section-contact-list {
@@ -569,6 +583,7 @@ li {
   .section-contact-item {
     display: inline-block;
     text-align: center;
+    margin-bottom: 5%;
  }
 
  .section-contact-img {
